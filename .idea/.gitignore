@@ -1,0 +1,32 @@
+# IntelliJ / IDE
+.idea/
+*.iml
+/workspace.xml
+/shelf/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build / compiled files
+target/
+out/
+*.class
+
+# Temp files
+*.tmp
+*.swp
+
+# Data sources / queries (your existing)
+queries/
+/dataSources/
+/dataSources.local.xml
+
+# HTTP client
+/httpRequests/
