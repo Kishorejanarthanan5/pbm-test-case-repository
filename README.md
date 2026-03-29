@@ -3,8 +3,15 @@
 ## Overview
 
 This repository contains real-world test scenarios for Pharmacy Benefit Management (PBM) systems written in Gherkin (BDD) format.
-
 The scenarios are based on actual claim adjudication workflows and cover core modules used in enterprise healthcare systems.
+
+---
+
+## Highlights
+- 40+ real-world PBM test scenarios based on enterprise claim adjudication workflows  
+- Covers eligibility, formulary, claims, prior authorization, and COB  
+- Includes real reject codes and pricing logic (AWP, MAC)  
+- Designed with BDD approach for easy automation conversion
 
 ---
 
