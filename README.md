@@ -18,17 +18,6 @@ The scenarios are based on actual claim adjudication workflows and cover core mo
 
 ---
 
-## Key PBM Concepts Included
-
-* NCPDP Reject Codes (70 – Non-formulary, 75 – PA required, 76 – Plan limits, 79 – Refill too soon)
-* AWP (Average Wholesale Price) & MAC (Maximum Allowable Cost) pricing logic
-* Copay tiering (Tier 1, 2, 3)
-* Step therapy validation
-* Prior authorization workflows
-* COB sequencing and balance calculation
-
----
-
 ## Repository Structure
 
 ```
@@ -37,11 +26,49 @@ claims/             -> Claim adjudication scenarios
 formulary/          -> Drug coverage and tier logic  
 prior_auth/         -> Prior authorization validations  
 cob/                -> Coordination of benefits scenarios  
+test-data/          -> Sample claim input data  
+docs/               -> PBM logic explanation and flow diagram  
 ```
 
 ---
 
-## Sample Scenario (Claims)
+## Key PBM Concepts Covered
+
+* NCPDP Reject Codes:
+
+  * 70 → Drug not covered
+  * 75 → Prior Authorization required
+  * 76 → Quantity / Days supply exceeded
+  * 79 → Duplicate claim / Refill too soon
+  * 007 → Member not eligible
+
+* Pricing Logic:
+
+  * AWP (Average Wholesale Price)
+  * MAC (Maximum Allowable Cost) override
+  * Copay based on formulary tier
+
+* Coverage Rules:
+
+  * Step therapy validation
+  * Generic substitution
+  * Preventive drug coverage
+
+* Claims Processing:
+
+  * Eligibility validation
+  * Plan limit checks
+  * Duplicate and refill timing validation
+
+* COB (Coordination of Benefits):
+
+  * Primary and secondary payer flow
+  * Balance calculation
+  * Payer sequencing
+
+---
+
+## Sample Scenario
 
 ```gherkin
 Scenario: Refill attempted too soon
@@ -53,27 +80,33 @@ Scenario: Refill attempted too soon
 
 ---
 
+## Additional Artifacts
+
+* Sample claim request data available in `test-data/sample-claim.json`
+* PBM adjudication logic explained in `docs/pbm-logic-explanation.md`
+* Claim adjudication flow diagram available below
+
+---
+
 ## Why This Repository
 
 Most automation portfolios focus only on tools like Selenium or API testing.
 
-This repository demonstrates:
+This repository focuses on:
 
-* Strong PBM domain knowledge
-* Real-world test design thinking
-* Understanding of backend claim adjudication logic
-* Ability to write meaningful and business-relevant test scenarios
+* Real-world PBM domain scenarios
+* Strong test design thinking
+* Backend claim adjudication logic
+* Business-readable BDD scenarios
 
 ---
 
-## How This Adds Value
-
-These scenarios can be directly used for:
+## How This Can Be Used
 
 * Manual test case design
 * BDD automation (Cucumber)
-* API validation (claims processing systems)
-* Client requirement validation
+* API testing (claims adjudication systems)
+* Requirement validation and client discussions
 
 ---
 
@@ -87,4 +120,12 @@ Senior QA Engineer with 6+ years of experience in PBM domain, specializing in cl
 
 * Convert scenarios into API automation using RestAssured
 * Integrate with Cucumber framework
-* Add sample request/response payload validation
+* Add request/response validation for claims processing
+
+---
+
+## Claim Adjudication Flow
+
+Visual representation of claim processing:
+
+👉 [View Claim Adjudication Flow](docs/claim-adjudication-flow.md)
