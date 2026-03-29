@@ -1,0 +1,10 @@
+{
+  "memberId": "MBR001",
+  "drugCode": "DRUG001",
+  "quantity": 30,
+  "daysSupply": 30,
+  "pharmacyId": "PH001",
+  "claimDate": "2026-03-01",
+  "priorAuthorization": false,
+  "otherCoverage": false
+}
