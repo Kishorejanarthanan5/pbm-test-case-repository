@@ -128,4 +128,4 @@ Senior QA Engineer with 6+ years of experience in PBM domain, specializing in cl
 
 Visual representation of claim processing:
 
-👉 [View Claim Adjudication Flow](docs/claim-adjudication-flow.md)
+👉 [View Claim Adjudication Flow](docs/docs/claim-adjudication-flow.md)
